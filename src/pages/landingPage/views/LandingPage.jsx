@@ -37,7 +37,10 @@ export default function LandingPage() {
 		}
 
 		if (isEmpty(celebrityName)) setCelebritiesRecord(masterRecord);
-		else setCelebritiesRecord(masterRecord?.filter(data => data?.first?.toLowerCase().includes(celebrityName?.toLowerCase().trim())));
+		else setCelebritiesRecord(masterRecord?.filter(data => {
+			const completeName = `${data?.first?.toLowerCase()} ${data?.last?.toLowerCase()}`;
+			return completeName.includes(celebrityName?.toLowerCase().trim())
+		}));
 	}
 
 	const updateCelebrityRecord = (updatedData) => {

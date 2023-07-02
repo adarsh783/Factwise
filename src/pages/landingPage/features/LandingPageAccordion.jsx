@@ -55,9 +55,9 @@ export default function LandingPageAccordion(props) {
 		<AppAccordion 
 			isRounded={true} 
 			isExpanded={isExpandedAccordion(accordionData?.id)} 
-			onChange={() => !isAccordionEdit && handleAccordionChange(accordionData?.id, !isAccordionExpanded)}
+			onChange={(event, value) => !isAccordionEdit && handleAccordionChange(accordionData?.id, value)}
 			keyIndex={index}
-			expandIcon={isExpandedAccordion(accordionData?.id) ? <HorizontalRuleIcon /> : <AddIcon />}
+			expandIcon={isExpandedAccordion(accordionData?.id) ? <AddIcon /> : <HorizontalRuleIcon />}
 			accordionSummaryStyle={{
 				padding: '15px 20px',
 				border: 0
