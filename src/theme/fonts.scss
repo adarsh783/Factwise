@@ -1,0 +1,17 @@
+/**
+ * Set Custom Fonts family and standard font sizes
+ * should be written here.
+ */
+
+@font-face {
+  font-family: 'font-medium';
+  src: url('../assets/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+/** ==================================
+--------------Font family--------------
+======================================*/
+
+.font-medium {
+  font-family: font-medium;
+}
