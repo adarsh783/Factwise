@@ -10,8 +10,6 @@ export const isNumber = (char) => {
 
 export const isStringWithoutNumber = (char) => {
 	const isValidString = stringRegex?.test(char);
-	console.log('character', char);
-	console.log('character_isValidString', isValidString);
 
 	if (isValidString) return true;
 	return false;
